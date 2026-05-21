@@ -59,6 +59,9 @@ docs/
   CAPABILITIES.md         Короткий список можливостей.
   QUICKSTART.md           Швидкий старт.
   SECURITY.md             Модель безпеки.
+
+prompts/
+  README.md               Готові prompt-шаблони для оркестратора і спеціалістів.
 ```
 
 ## 3. Як встановити у себе
@@ -96,7 +99,7 @@ MEMORY.template.md    -> MEMORY.md
 Після розпакування відкрий папку шаблона в Codex і дай запит:
 
 ```text
-Прочитай AGENTS.md, README_UA.md і docs/SECURITY.md.
+Прочитай AGENTS.md, README.md, prompts/README.md і docs/SECURITY.md.
 Підготуй цей template під мене:
 - запитай тільки те, чого реально бракує;
 - створи локальні .env.example файли, але не проси секрети в чаті;
@@ -153,6 +156,33 @@ Report format: summary, evidence, files changed, next action
 - email/social publishing тільки після явного дозволу або durable config;
 - live deploy тільки після окремого підтвердження;
 - приватні переписки, ключі, customer data і call recordings не виносяться в template.
+
+## 6.1. Як правильно промптити оркестратора
+
+Не проси агента просто "зробити задачу". Для якісної роботи дай йому роль, контекст, межі, входи, очікувані deliverables і формат звіту.
+
+Базова формула:
+
+```text
+Role: хто відповідає за задачу
+Goal: який результат потрібен
+Context: що вже відомо
+Inputs: файли, посилання, дані, обмеження
+Boundaries: чого не можна робити без дозволу
+Deliverables: що саме має бути створено
+Evidence: як перевірити, що задача виконана
+```
+
+Готові приклади лежать у [`prompts/README.md`](prompts/README.md):
+
+- базова задача для головного оркестратора;
+- делегування спеціалісту;
+- розклад задачі по різних агентських ролях;
+- lead-to-landing workflow;
+- Telegram-бот із сегментацією і follow-up;
+- content/social workflow;
+- security review перед публікацією template;
+- локальна перевірка після змін.
 
 ## 7. Як налаштувати пам'ять
 

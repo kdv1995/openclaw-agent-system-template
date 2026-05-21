@@ -24,6 +24,7 @@ systems/                  Example multi-agent operating systems.
 examples/                 Example app templates, including a Telegram business bot.
 skills/                   Reusable local OpenClaw skills.
 docs/                     Setup, capabilities, and security guidance.
+prompts/                  Ready-to-use prompt templates for orchestrator and specialist workflows.
 ```
 
 ## Quick Start
