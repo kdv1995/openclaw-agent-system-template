@@ -4,6 +4,8 @@ Sanitized starter kit for building a personal AI operations workspace on top of 
 
 This repository is a template. It intentionally does not include private memory, live state, credentials, customer files, logs, generated media, tokens, or production exports.
 
+Full Ukrainian documentation is available in [README_UA.md](README_UA.md).
+
 ## What This System Can Do
 
 - Run a main personal orchestrator with durable workspace memory.
