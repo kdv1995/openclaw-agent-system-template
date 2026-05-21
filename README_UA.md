@@ -411,4 +411,3 @@ unzip -l openclaw-agent-system-template.zip | rg -i 'env|secret|token|credential
 ## 20. Головний принцип
 
 Публічний template має передавати архітектуру, процеси, ролі, runbooks і приклади. Він не має передавати життя власника системи: приватні діалоги, токени, клієнтів, історію задач, логи і production state.
-
