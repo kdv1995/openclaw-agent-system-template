@@ -1,0 +1,55 @@
+brand:
+  name: Your Brand
+  owner: template owner
+  niche: AI agents for business automation
+  offer: AI-агенти для бізнесу: ліди, CRM, дзвінки, follow-up, операційка
+  primary_cta: "Напиши АГЕНТ — підберу AI-агента під твій бізнес"
+
+postiz:
+  env_file: <workspace>/social-growth-os/.env
+  cli: postiz
+  default_mode: draft_or_schedule_after_owner_approval
+  integrations:
+    instagram_personal:
+      id: POSTIZ_INSTAGRAM_PROFILE_ID
+      identifier: instagram-standalone
+      profile: your_profile
+    instagram_your_brand:
+      id: POSTIZ_INSTAGRAM_BRAND_ID
+      identifier: instagram-standalone
+      profile: your_brand
+    tiktok_your_brand:
+      id: POSTIZ_TIKTOK_ID
+      identifier: tiktok
+      profile: your_brand
+    facebook_your_brand:
+      id: POSTIZ_FACEBOOK_ID
+      identifier: facebook
+      profile: your_brand
+    threads_your_brand:
+      id: POSTIZ_THREADS_BRAND_ID
+      identifier: threads
+      profile: your_brand
+    threads_profile:
+      id: POSTIZ_THREADS_PROFILE_ID
+      identifier: threads
+      profile: your_profile
+
+pipeline:
+  approval_required_before_external_publish: true
+  default_targets:
+    - instagram_personal
+    - tiktok_your_brand
+    - facebook_your_brand
+    - threads_profile
+  stages:
+    - trends
+    - profile_context
+    - idea_strategy
+    - scriptwriting
+    - creative_direction
+    - asset_intake
+    - platform_adaptation
+    - postiz_publishing
+    - analytics
+    - learning

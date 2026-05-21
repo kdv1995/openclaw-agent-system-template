@@ -1,0 +1,83 @@
+{
+  "factory": "lead-to-landing-os",
+  "owner": "main",
+  "defaultTimezone": "Europe/Kyiv",
+  "agents": [
+    {
+      "id": "lead-qualifier",
+      "roleFile": "01-lead-qualifier.md",
+      "handoff": "qualifier -> calls-agent",
+      "externalWrites": false,
+      "skills": [
+        "google-sheets",
+        "sales",
+        "crm"
+      ]
+    },
+    {
+      "id": "calls-agent",
+      "roleFile": "02-calls-agent.md",
+      "handoff": "calls-agent -> business-researcher when interested",
+      "externalWrites": true,
+      "requiresExplicitScope": true,
+      "skills": [
+        "elevenlabs-agents"
+      ]
+    },
+    {
+      "id": "business-researcher",
+      "roleFile": "03-business-researcher.md",
+      "handoff": "researcher -> ui-ux-designer",
+      "externalWrites": false,
+      "skills": [
+        "market-research",
+        "competitive-analysis"
+      ]
+    },
+    {
+      "id": "ui-ux-designer",
+      "roleFile": "04-ui-ux-designer.md",
+      "handoff": "ui-ux-designer -> visual-designer/full-stack-developer",
+      "externalWrites": false,
+      "skills": [
+        "ui-design-guide",
+        "opc-landing-page-manager",
+        "sales-funnel-design"
+      ]
+    },
+    {
+      "id": "visual-designer",
+      "roleFile": "05-visual-designer.md",
+      "handoff": "visual-designer -> full-stack-developer",
+      "externalWrites": false,
+      "imageRoute": "GPT image model 2.0 via subscribed ChatGPT/OpenClaw image route",
+      "skills": [
+        "design",
+        "frontend-design"
+      ]
+    },
+    {
+      "id": "full-stack-developer",
+      "roleFile": "06-full-stack-developer.md",
+      "handoff": "full-stack-developer -> seo-optimizer",
+      "externalWrites": false,
+      "skills": [
+        "nextjs",
+        "react",
+        "react-best-practices",
+        "frontend-design"
+      ]
+    },
+    {
+      "id": "seo-optimizer",
+      "roleFile": "07-seo-optimizer.md",
+      "handoff": "seo-optimizer -> developer/main",
+      "externalWrites": false,
+      "skills": [
+        "seo",
+        "website-seo",
+        "analytics-tracking"
+      ]
+    }
+  ]
+}
