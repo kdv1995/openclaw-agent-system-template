@@ -14,7 +14,7 @@ Turn trend + profile context into content hypotheses.
 - CTA
 - required asset/media
 
-## Your Brand pillars
+## example brand pillars
 - AI-agent demos
 - business pain → AI solution
 - case/before-after

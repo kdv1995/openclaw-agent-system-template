@@ -7,7 +7,7 @@
 
 ## Current Project
 
-- **Name:** 
+- **Name:**
 - **Type:** SPA / SSR / Static
 - **Framework:** Next.js / Vite / Remix
 

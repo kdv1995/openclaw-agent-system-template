@@ -1,13 +1,13 @@
 # Agent Task: Profile & Funnel Context Analyst
 
 ## Role
-Keep the current context of Your Brand profiles and funnel.
+Keep the current context of example brand profiles and funnel.
 
 ## Channels
-- Instagram: @your_profile
-- TikTok: @your_brand
-- Facebook: facebook.com/your_brand
-- Threads: Postiz integrations `threads_profile` and/or `threads_your_brand`
+- Instagram: @example_threads_handle
+- TikTok: @codebezmezh
+- Facebook: facebook.com/codebezmezh
+- Threads: Postiz integrations `threads_daniel` and/or `threads_codebezmezh`
 
 ## Output
 `profile_context.md` with:

@@ -7,7 +7,7 @@ Run a controlled pipeline from Google Sheets leads and approved outbound calls t
 ## High-Level Flow
 
 ```text
-template owner approval/scope
+the operator approval/scope
   -> lead-qualifier
   -> calls-agent
   -> interested?
@@ -41,14 +41,14 @@ The orchestrator must provide:
 - script/offer
 - stop conditions
 
-Default caller number for lead calls: `APPROVED_CALLER_ID`.
+Default caller number for Vinnytsia lead calls: `<approved-caller-number>`.
 
 ## Interested Lead Handoff
 
 A lead can move to landing flow when:
 
 - transcript/status says interested
-- template owner manually marks it as interested
+- the operator manually marks it as interested
 - lead explicitly asks for next step
 
 The handoff package must include:
@@ -63,7 +63,7 @@ The handoff package must include:
 
 ## Visual Rule
 
-For landing work, generated images must use GPT image model 2.0 through the subscribed ChatGPT/OpenClaw image route. Do not use the legacy OpenAI API image CLI path unless template owner explicitly changes this rule.
+For landing work, generated images must use GPT image model 2.0 through the subscribed ChatGPT/OpenClaw image route. Do not use the legacy OpenAI API image CLI path unless the operator explicitly changes this rule.
 
 ## External Action Boundaries
 

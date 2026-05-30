@@ -42,6 +42,18 @@ trend scout -> profile context -> idea strategy -> scriptwriting -> creative dir
 
 Use it to run repeatable content production with clear stage ownership.
 
+### Content Factory
+
+Threads/Facebook content skeleton with research, writing, validation, Postiz payload examples, analytics helpers, and safety rules. Real runs, queues, state, generated media, and platform responses are intentionally excluded.
+
+### eBay Watch
+
+Configurable marketplace monitor for eBay Browse API searches. It supports category/query filters, price ranges, condition filters, excluded/required keywords, scoring, deduplication, Markdown/JSON reports, and optional Telegram digest delivery.
+
+### Cartoon Factory
+
+Production handoff system for short cartoon/video packages: episode brief, beat sheet, script, keyframe prompts, voice script, SFX/music map, timing, edit plan, and QA checklists.
+
 ### Telegram Business Bot
 
 Includes a Docker-based Python bot template with PostgreSQL, segmentation questions, consultation CTA, and follow-up scaffolding.

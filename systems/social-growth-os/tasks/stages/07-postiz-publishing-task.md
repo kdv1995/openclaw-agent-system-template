@@ -1,7 +1,7 @@
 # Stage Task: Publishing Ops / Postiz
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/07-publishing-ops-postiz.md`
+`systems/social-growth-os/agents/07-publishing-ops-postiz.md`
 
 ## Goal
 After owner approval, upload approved media, create/schedule posts in Postiz, and verify IDs/status.

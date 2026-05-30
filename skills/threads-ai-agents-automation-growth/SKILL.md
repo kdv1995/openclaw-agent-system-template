@@ -1,11 +1,11 @@
 ---
 name: threads-ai-agents-automation-growth
-description: "Research-backed Threads content system for template owner's AI agents, automation, and workflow niche."
+description: "Research-backed Threads content system for the operator's AI agents, automation, and workflow niche."
 ---
 
 # Threads AI Agents Automation Growth Skill
 
-Use this skill when creating, researching, editing, or scheduling Threads content for `your_profile` in the niche:
+Use this skill when creating, researching, editing, or scheduling Threads content for `example_threads_handle` in the niche:
 
 - AI agents
 - business automation
@@ -17,7 +17,7 @@ Default language: Ukrainian. Tone: clear, practical, sharp, founder/operator voi
 
 ## Core Positioning
 
-template owner is not posting as an "AI news page". He is posting as an operator/architect who translates AI-agent trends into practical workflows.
+the operator is not posting as an "AI news page". He is posting as an operator/architect who translates AI-agent trends into practical workflows.
 
 Every good post should answer one of these:
 
@@ -41,7 +41,7 @@ Based on May 2026 research:
 - Reply-chain carousels / threaded chains work when the first post is a tight hook and each reply adds one clear idea.
 - MomentumHive's 4,086-post Threads analysis found that statistic-style hooks can perform well when the number creates concrete specificity.
 - Buffer's 2026 social guide says Threads rewards specificity and niche interests; midweek morning/early afternoon is often stronger, but content quality matters more than timing.
-- template owner's own Postiz analytics for `your_profile` on 2026-05-20 showed early signs that practical business automation posts get replies/likes, while the account is still early enough to optimize through repeated tests.
+- the operator's own Postiz analytics for `example_threads_handle` on 2026-05-20 showed early signs that practical business automation posts get replies/likes, while the account is still early enough to optimize through repeated tests.
 
 Sources:
 
@@ -198,8 +198,8 @@ Rules:
 - Each post under 500 characters.
 - First post must stand alone.
 - Every reply adds a new idea, not a repetition.
-- For scheduled content-factory cron jobs, template owner has enabled no-approval autopublishing through Postiz after validation.
-- Use direct fallback only if Postiz fails and template owner explicitly approves fallback.
+- For scheduled content-factory cron jobs, the operator has enabled no-approval autopublishing through Postiz after validation.
+- Use direct fallback only if Postiz fails and the operator explicitly approves fallback.
 
 Template:
 
@@ -214,7 +214,7 @@ Template:
 
 ### Big Chain
 
-Use only when template owner asks for depth or when bundling multiple related news items.
+Use only when the operator asks for depth or when bundling multiple related news items.
 
 Rules:
 
@@ -275,7 +275,7 @@ Before publishing:
 7. If it is news, source is checked from X/Twitter plus at least one credible or official source when possible.
 8. If it is a big chain, the posts connect under one thesis.
 9. CTA is specific and natural.
-10. If using direct Threads fallback, publish only after explicit current approval or when Postiz is unavailable and template owner has explicitly asked to publish now.
+10. If using direct Threads fallback, publish only after explicit current approval or when Postiz is unavailable and the operator has explicitly asked to publish now.
 
 ## Daily Content Mix
 

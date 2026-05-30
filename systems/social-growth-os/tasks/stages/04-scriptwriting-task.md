@@ -1,7 +1,7 @@
 # Stage Task: Scriptwriter
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/04-scriptwriter.md`
+`systems/social-growth-os/agents/04-scriptwriter.md`
 
 ## Goal
 Write ready-to-record scripts, captions, hooks, CTAs, and shot lists for selected ideas.

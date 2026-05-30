@@ -2,19 +2,19 @@
 
 ## Roles
 
-- Orchestrator: talks to template owner, plans work, decides what to delegate, verifies results, asks for approval before external/destructive actions.
+- Orchestrator: talks to the operator, plans work, decides what to delegate, verifies results, asks for approval before external/destructive actions.
 - Specialist agents: own one operational domain, execute bounded tasks, keep their own workspace memory, and report back with evidence.
 
 ## Contract
 
 All specialist work follows this contract:
 
-1. template owner talks to the main orchestrator.
+1. the operator talks to the main orchestrator.
 2. The orchestrator decides whether to handle the task directly or delegate it.
 3. A specialist agent receives a bounded task with owner, scope, allowed actions, inputs, deliverables, and report format.
 4. The specialist works inside its own domain/workspace and does not broaden scope without approval.
 5. The specialist reports back to the orchestrator with evidence, blockers, and next suggested action.
-6. The orchestrator verifies the result, resolves cross-agent context, and replies to template owner.
+6. The orchestrator verifies the result, resolves cross-agent context, and replies to the operator.
 
 Specialists are workers with domain ownership, not independent user-facing assistants.
 
@@ -64,7 +64,7 @@ Use direct runtime delegation for short, bounded work that should finish during 
 - Spawn or message the specialist with the task spec.
 - Prefer isolated context unless the specialist needs current chat history.
 - Include explicit external-action permission if any outside service write is expected.
-- The specialist returns a concise report, not a message to template owner.
+- The specialist returns a concise report, not a message to the operator.
 
 ## Durable File Handoff
 
@@ -78,7 +78,7 @@ Use durable handoff for long-running, resumable, scheduled, or autonomous work:
 
 ## Boundaries
 
-- Specialists do not impersonate template owner.
+- Specialists do not impersonate the operator.
 - Specialists do not send direct Telegram/user-facing replies unless the task explicitly says to do that.
 - Specialists do not make public/external/destructive actions unless the task explicitly allows it.
 - Specialists do not read broad personal memory unless needed for the task.
@@ -105,3 +105,6 @@ The orchestrator should not treat a specialist task as complete until at least o
 - transcript/audio/report path
 - dry-run result
 - explicit blocker
+
+For visible UI, landing pages, dashboards, or frontend implementation, also follow:
+`departments/runbooks/design-quality-skill-routing.md`

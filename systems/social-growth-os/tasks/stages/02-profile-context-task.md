@@ -1,7 +1,7 @@
 # Stage Task: Profile Context Analyst
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/02-profile-context-analyst.md`
+`systems/social-growth-os/agents/02-profile-context-analyst.md`
 
 ## Goal
 Update the current profile/funnel context for Instagram, TikTok, Facebook, and Threads before content planning.

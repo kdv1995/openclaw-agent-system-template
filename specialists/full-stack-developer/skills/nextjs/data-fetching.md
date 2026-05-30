@@ -28,7 +28,7 @@ async function Dashboard() {
     getPosts(),
     getComments(),
   ])
-  
+
   return (
     <>
       <UserCard user={user} />
@@ -57,12 +57,12 @@ export default function Page() {
     <main>
       {/* Shows immediately */}
       <h1>Dashboard</h1>
-      
+
       {/* Streams when ready */}
       <Suspense fallback={<UserSkeleton />}>
         <UserProfile />
       </Suspense>
-      
+
       {/* Independent stream */}
       <Suspense fallback={<PostsSkeleton />}>
         <RecentPosts />
@@ -180,7 +180,7 @@ const fetcher = (url: string) => fetch(url).then(r => r.json())
 
 export function UserPosts() {
   const { data, error, isLoading } = useSWR('/api/posts', fetcher)
-  
+
   if (isLoading) return <Skeleton />
   if (error) return <Error />
   return <PostList posts={data} />
@@ -195,7 +195,7 @@ export function UserPosts() {
     queryKey: ['posts'],
     queryFn: () => fetch('/api/posts').then(r => r.json()),
   })
-  
+
   if (isLoading) return <Skeleton />
   if (error) return <Error />
   return <PostList posts={data} />
@@ -249,7 +249,7 @@ export function SearchInput() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const q = searchParams.get('q') || ''
-  
+
   function handleSearch(term: string) {
     const params = new URLSearchParams(searchParams)
     if (term) {
@@ -259,7 +259,7 @@ export function SearchInput() {
     }
     router.push(`?${params.toString()}`)
   }
-  
+
   return <input defaultValue={q} onChange={e => handleSearch(e.target.value)} />
 }
 ```
@@ -296,12 +296,12 @@ const getKey = (pageIndex: number, previousPageData: any) => {
 
 export function InfiniteList() {
   const { data, size, setSize, isLoading } = useSWRInfinite(getKey, fetcher)
-  
+
   const posts = data ? data.flat() : []
   const isLoadingMore = isLoading || (size > 0 && data && typeof data[size - 1] === 'undefined')
   const isEmpty = data?.[0]?.length === 0
   const isReachingEnd = isEmpty || (data && data[data.length - 1]?.length < 10)
-  
+
   return (
     <>
       {posts.map(post => <Post key={post.id} post={post} />)}

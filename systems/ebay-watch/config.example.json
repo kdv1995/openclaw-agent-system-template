@@ -1,0 +1,31 @@
+{
+  "timezone": "Europe/Kyiv",
+  "marketplace": "EBAY_US",
+  "limit": 30,
+  "currency": "USD",
+  "telegramChatId": "",
+  "notifyOnlyNew": true,
+  "searches": [
+    {
+      "id": "mac-mini-m4-example",
+      "enabled": false,
+      "label": "Mac mini M4 example",
+      "query": "Mac mini M4 24GB 512GB",
+      "categoryIds": [],
+      "minPrice": 300,
+      "maxPrice": 900,
+      "conditions": ["NEW", "USED", "CERTIFIED_REFURBISHED"],
+      "buyingOptions": ["FIXED_PRICE", "AUCTION"],
+      "excludeKeywords": ["parts", "for parts", "locked", "icloud", "mdm"],
+      "requiredKeywords": ["mac", "mini"],
+      "scoreRules": {
+        "belowMaxPriceBonus": 20,
+        "freeShippingBonus": 8,
+        "sellerFeedbackMin": 98,
+        "sellerFeedbackBonus": 10,
+        "newListingHours": 24,
+        "newListingBonus": 12
+      }
+    }
+  ]
+}

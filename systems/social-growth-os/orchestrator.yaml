@@ -1,47 +1,47 @@
 brand:
-  name: Your Brand
-  owner: template owner
+  name: example brand
+  owner: template-owner
   niche: AI agents for business automation
   offer: AI-агенти для бізнесу: ліди, CRM, дзвінки, follow-up, операційка
   primary_cta: "Напиши АГЕНТ — підберу AI-агента під твій бізнес"
 
 postiz:
-  env_file: <workspace>/social-growth-os/.env
+  env_file: .env
   cli: postiz
   default_mode: draft_or_schedule_after_owner_approval
   integrations:
     instagram_personal:
-      id: POSTIZ_INSTAGRAM_PROFILE_ID
+      id: cmmwgs1oe02d5le0y8wc0mb8k
       identifier: instagram-standalone
-      profile: your_profile
-    instagram_your_brand:
-      id: POSTIZ_INSTAGRAM_BRAND_ID
+      profile: example_threads_handle
+    instagram_codebezmezh:
+      id: cmojszcte010slv0yzz14jueu
       identifier: instagram-standalone
-      profile: your_brand
-    tiktok_your_brand:
-      id: POSTIZ_TIKTOK_ID
+      profile: code.bezmezh
+    tiktok_codebezmezh:
+      id: cmmwgkuxw00fmp30ykub2io7u
       identifier: tiktok
-      profile: your_brand
-    facebook_your_brand:
-      id: POSTIZ_FACEBOOK_ID
+      profile: codebezmezh
+    facebook_codebezmezh:
+      id: cmojta1o20165o70ygbci5fit
       identifier: facebook
-      profile: your_brand
-    threads_your_brand:
-      id: POSTIZ_THREADS_BRAND_ID
+      profile: codebezmezh
+    threads_codebezmezh:
+      id: cmojt86ik0160o70yiig35nvl
       identifier: threads
-      profile: your_brand
-    threads_profile:
-      id: POSTIZ_THREADS_PROFILE_ID
+      profile: code.bezmezh
+    threads_daniel:
+      id: cmn2z0wij06plpb0yrviw718g
       identifier: threads
-      profile: your_profile
+      profile: example_threads_handle
 
 pipeline:
   approval_required_before_external_publish: true
   default_targets:
     - instagram_personal
-    - tiktok_your_brand
-    - facebook_your_brand
-    - threads_profile
+    - tiktok_codebezmezh
+    - facebook_codebezmezh
+    - threads_daniel
   stages:
     - trends
     - profile_context

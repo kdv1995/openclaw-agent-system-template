@@ -10,6 +10,8 @@ This repository is a template. It intentionally does not include private memory,
 - Route bounded work to specialist agents through written task handoffs.
 - Manage lead-to-landing workflows: lead filtering, calls, business research, UX, visuals, implementation, SEO.
 - Operate content/social publishing pipelines with separate research, writing, adaptation, publishing, analytics, and learning stages.
+- Monitor marketplace categories through a configurable eBay Watch service with scoring, deduplication, and optional Telegram digests.
+- Structure cartoon/video production packages with script, storyboard, voice, motion, and QA handoffs.
 - Build Telegram bot prototypes with PostgreSQL, Docker, segmentation flows, and follow-up logic.
 - Keep repeatable runbooks for agent-to-agent communication, safety boundaries, and reporting.
 - Use skills as portable operational knowledge for design, SEO, security, browser automation, image generation, transcription, publishing, and more.
@@ -34,7 +36,7 @@ prompts/                  Ready-to-use prompt templates for orchestrator and spe
 3. Fill in your own identity, timezone, preferences, tool notes, and safety rules.
 4. Add credentials only through local `.env` files or your secrets manager. Never commit real credentials.
 5. Use `departments/inbox/` for new delegated tasks and `departments/reports/` for specialist results.
-6. Start with `systems/lead-to-landing-os/` or `systems/social-growth-os/` as examples of larger agent workflows.
+6. Start with `systems/lead-to-landing-os/`, `systems/social-growth-os/`, `systems/content-factory/`, or `systems/ebay-watch/` as examples of larger agent workflows.
 
 ## Safety Model
 

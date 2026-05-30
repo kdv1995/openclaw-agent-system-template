@@ -47,6 +47,9 @@ specialists/
 systems/
   lead-to-landing-os/     Приклад повного агентського pipeline для лендингів.
   social-growth-os/       Приклад контентної/соціальної агентської системи.
+  content-factory/        Threads/Facebook content factory skeleton без live state.
+  ebay-watch/             Двічі-на-день marketplace monitor з scoring і Telegram digest.
+  cartoon-factory/        Cartoon production package: script, storyboard, voice, video QA.
 
 skills/
   ...                     Переносимі skills для OpenClaw/Codex.

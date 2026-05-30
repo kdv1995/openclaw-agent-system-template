@@ -161,7 +161,7 @@ import { useRouter } from 'next/navigation'
 
 function Component() {
   const router = useRouter()
-  
+
   router.push('/dashboard')        // Navigate
   router.replace('/login')         // Replace history
   router.refresh()                 // Refresh server components
@@ -224,13 +224,13 @@ import { usePathname } from 'next/navigation'
 
 export function NavLinks() {
   const pathname = usePathname()
-  
+
   const links = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/blog', label: 'Blog' },
   ]
-  
+
   return (
     <nav>
       {links.map((link) => (

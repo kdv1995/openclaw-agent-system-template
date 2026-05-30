@@ -6,13 +6,13 @@ Build or update the landing page from approved UX and visual specs.
 ## Skills
 
 - Use `nextjs` for Next.js/App Router builds:
-  `<workspace>/full-stack-developer/skills/nextjs/SKILL.md`
+  `workspace/full-stack-developer/skills/nextjs/SKILL.md`
 - Use `react` for React component architecture, forms, state, performance, and testing:
-  `<workspace>/full-stack-developer/skills/react/SKILL.md`
+  `workspace/full-stack-developer/skills/react/SKILL.md`
 - Use `react-best-practices` for production review/refactor:
-  `<workspace>/full-stack-developer/skills/react-best-practices/SKILL.md`
+  `workspace/full-stack-developer/skills/react-best-practices/SKILL.md`
 - Use `frontend-design` when implementing polished frontend UI from design specs:
-  `<workspace>/full-stack-developer/skills/frontend-design-3/SKILL.md`
+  `workspace/full-stack-developer/skills/frontend-design-3/SKILL.md`
 
 ## Inputs
 

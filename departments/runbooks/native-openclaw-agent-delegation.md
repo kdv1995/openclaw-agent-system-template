@@ -8,12 +8,12 @@ Let the main orchestrator keep Telegram/direct conversation lightweight while sp
 
 ## Default Pattern
 
-1. Orchestrator receives template owner's request.
+1. Orchestrator receives the operator's request.
 2. Orchestrator decides whether the task belongs to a specialist.
 3. Orchestrator spawns a native OpenClaw child session for short parallel work, or writes a durable task file for long-running work.
-4. Specialist works in its own domain and does not message template owner directly.
+4. Specialist works in its own domain and does not message the operator directly.
 5. Specialist reports back with required fields.
-6. Orchestrator verifies evidence and replies to template owner.
+6. Orchestrator verifies evidence and replies to the operator.
 
 ## Native Runtime Delegation
 
@@ -23,7 +23,7 @@ Recommended fields:
 
 - `agentId`: configured specialist id, e.g. `threads-research`
 - `context`: `isolated` by default, `fork` only if the child needs the user transcript
-- `cwd`: `<workspace>`
+- `cwd`: `~/.openclaw/workspace`
 - `mode`: `run`
 - `runtime`: `subagent`
 - `taskName`: stable snake_case task name
@@ -45,10 +45,10 @@ Use durable handoff when work may outlive the current chat turn.
 
 Paths:
 
-- inbox: `<openclaw-home>/departments/inbox/`
-- active: `<openclaw-home>/departments/active/`
-- done: `<openclaw-home>/departments/done/`
-- reports: `<openclaw-home>/departments/reports/`
+- inbox: `departments/inbox/`
+- active: `departments/active/`
+- done: `departments/done/`
+- reports: `departments/reports/`
 
 ## Specialist Map
 
@@ -66,28 +66,28 @@ Paths:
 
 1. Main orchestrator creates research task for `threads-research`.
 2. `threads-research` reports 3-5 strong topics with evidence.
-3. Main chooses topic or asks template owner for approval if needed.
+3. Main chooses topic or asks the operator for approval if needed.
 4. Main creates writing task for `threads-writer`, including:
    - `skills/threads-ai-agents-automation-growth/SKILL.md`
    - `skills/threads-viral-news-factory/SKILL.md` when news-led
 5. `threads-writer` writes package to `content-factory/threads/runs/`.
 6. `threads-editor` validates.
-7. Main asks template owner for publishing approval unless already explicitly granted.
+7. Main asks the operator for publishing approval unless already explicitly granted.
 8. `publishing-ops` or `threads-scheduler` publishes/schedules through Postiz and writes evidence.
 
 ## Automatic Cron Flow
 
-Current daily jobs live in `<openclaw-home>/cron/jobs.json`:
+Current daily jobs live in `~/.openclaw/cron/jobs.json`:
 
-- `daily-ai-agent-trends-review-delivered`: `0 11 * * *` Europe/Kyiv. Daily Threads AI-agent trends autopublish through Postiz after validation. Threads topics must start from X/Twitter signal.
-- `daily-facebook-ai-content-factory-review-delivered`: `15 11 * * *` Europe/Kyiv. Daily Facebook `Your Brand` autopublish through Postiz after validation. Visuals must use OpenClaw `image_generate` with model `openai/gpt-image-2`.
-- `content-growth-slot-14-delivered`: `0 14 * * *` Europe/Kyiv. Daily second growth slot, creating and autopublishing Threads + Facebook packages through Postiz after validation.
-- `content-growth-slot-18-delivered`: `0 18 * * *` Europe/Kyiv. Daily third growth slot, creating and autopublishing Threads + Facebook packages through Postiz after validation.
-- `weekly-social-growth-analytics-sunday-delivered`: `0 13 * * 0` Europe/Kyiv. Sunday analytics and strategy correction: reviews the week's Threads/Facebook post performance, writes a weekly analytics report, updates concise learnings, recommends strategy changes for the next week, and sends template owner a Telegram digest.
+- `threads-ai-x-signal-0900-delivered`: `0 9 * * *` Europe/Kyiv. Threads-only X/Twitter-led AI signal autopublish through Postiz after validation.
+- `daily-ai-agent-trends-review-delivered`: `0 11 * * *` Europe/Kyiv. Threads-only X/Twitter-led AI signal autopublish through Postiz after validation.
+- `threads-ai-x-signal-1400-delivered`: `0 14 * * *` Europe/Kyiv. Threads-only X/Twitter-led AI signal autopublish through Postiz after validation.
+- `threads-ai-x-signal-1700-delivered`: `0 17 * * *` Europe/Kyiv. Threads-only X/Twitter-led AI signal autopublish through Postiz after validation.
+- `threads-ai-x-signal-2000-delivered`: `0 20 * * *` Europe/Kyiv. Threads-only X/Twitter-led AI signal autopublish through Postiz after validation.
+- `daily-facebook-ai-content-factory-review-delivered`: disabled as of 2026-05-28. Do not re-enable Facebook autopublishing without fresh explicit approval from the operator.
+- `weekly-social-growth-analytics-sunday-delivered`: `0 13 * * 0` Europe/Kyiv. Sunday analytics and strategy correction: reviews the week's Threads/Facebook post performance, writes a weekly analytics report, updates concise learnings, recommends strategy changes for the next week, and sends the operator a Telegram digest.
 
-Architecture rule: scheduled cron jobs must have explicit Telegram delivery (`delivery.mode="announce"`) so successful runs produce visible publishing evidence or blockers. template owner enabled no-approval autopublishing for scheduled Threads/Facebook content-factory jobs on 2026-05-20; this applies only to Postiz publishing after validation. Direct platform fallbacks still require separate approval.
-
-Tool routing rule: if a cron run delegates Facebook visual work, delegate it to `visual-designer` or generate in the main cron session before `publishing-ops`. `publishing-ops` is for Postiz publishing and verification only; it should not generate images.
+Architecture rule: scheduled cron jobs must have explicit Telegram delivery (`delivery.mode="announce"`) so successful runs produce visible publishing evidence or blockers. As of 2026-05-28, no-approval autopublishing applies only to scheduled Threads content-factory jobs through Postiz after validation. Facebook autopublishing and all direct platform fallbacks require fresh explicit approval.
 
 ## Report Format
 

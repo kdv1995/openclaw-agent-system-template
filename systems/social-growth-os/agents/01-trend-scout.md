@@ -1,7 +1,7 @@
 # Agent Task: Trend Scout
 
 ## Role
-Find current AI/business/social trends that can become Your Brand content.
+Find current AI/business/social trends that can become example brand content.
 
 ## Sources
 - TikTok/Instagram visible trends when accessible

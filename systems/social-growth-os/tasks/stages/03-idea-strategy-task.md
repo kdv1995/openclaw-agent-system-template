@@ -1,7 +1,7 @@
 # Stage Task: Idea Strategist
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/03-idea-strategist.md`
+`systems/social-growth-os/agents/03-idea-strategist.md`
 
 ## Goal
 Use trends + profile context to create a 7-14 item content plan with hypotheses and target metrics.

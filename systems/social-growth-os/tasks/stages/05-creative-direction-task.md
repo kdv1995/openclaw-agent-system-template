@@ -1,7 +1,7 @@
 # Stage Task: Creative Director
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/05-creative-director.md`
+`systems/social-growth-os/agents/05-creative-director.md`
 
 ## Goal
 Convert scripts into filming/editing instructions and required asset list.

@@ -1,7 +1,7 @@
 # Stage Task: Analytics Analyst
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/08-analytics-analyst.md`
+`systems/social-growth-os/agents/08-analytics-analyst.md`
 
 ## Goal
 Collect metrics at 24h/48h/72h/7d and classify posts.

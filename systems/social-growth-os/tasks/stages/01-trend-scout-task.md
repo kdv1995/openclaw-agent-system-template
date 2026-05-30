@@ -1,10 +1,10 @@
 # Stage Task: Trend Scout
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/01-trend-scout.md`
+`systems/social-growth-os/agents/01-trend-scout.md`
 
 ## Goal
-Find 10-20 current AI/business automation trends and turn them into usable Your Brand content angles.
+Find 10-20 current AI/business automation trends and turn them into usable example brand content angles.
 
 ## Inputs
 - Run folder: `runs/<run_id>/`

@@ -132,7 +132,7 @@ services:
     depends_on:
       - db
     restart: unless-stopped
-  
+
   db:
     image: postgres:16-alpine
     volumes:
@@ -208,7 +208,7 @@ npm run build
 server {
     listen 80;
     server_name example.com;
-    
+
     location / {
         proxy_pass http://localhost:3000;
         proxy_http_version 1.1;
@@ -255,7 +255,7 @@ export async function GET() {
   try {
     // Check database
     await db.$queryRaw`SELECT 1`
-    
+
     return Response.json({
       status: 'healthy',
       timestamp: new Date().toISOString(),
@@ -276,13 +276,13 @@ export async function GET() {
 module.exports = {
   // Compress responses
   compress: true,
-  
+
   // Optimize images
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
-  
+
   // Bundle analyzer
   webpack: (config, { isServer }) => {
     if (process.env.ANALYZE === 'true') {
@@ -334,16 +334,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      
+
       - run: npm ci
       - run: npm run build
       - run: npm test
-      
+
       - uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}

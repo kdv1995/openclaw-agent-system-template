@@ -1,16 +1,16 @@
 # End-to-End Task: Trend → Content → Postiz → Analytics
 
 ## Owner
-template owner / Your Brand
+the operator / example brand
 
 ## Goal
-Create and publish a content batch for Your Brand using agents from trend discovery to Postiz publishing, then analyze results.
+Create and publish a content batch for example brand using agents from trend discovery to Postiz publishing, then analyze results.
 
 ## Target channels
-- Instagram personal: your_profile
-- TikTok: your_brand
-- Facebook page: your_brand
-- Threads: your_profile or your_brand, selected per campaign
+- Instagram personal: example_threads_handle
+- TikTok: codebezmezh
+- Facebook page: codebezmezh
+- Threads: example_threads_handle or code.bezmezh, selected per campaign
 
 ## Required stages
 1. Trend Scout: produce trends report.
@@ -24,7 +24,7 @@ Create and publish a content batch for Your Brand using agents from trend discov
 9. Learning Curator: update learnings.
 
 ## Approval gate
-Before stage 7 creates/schedules external posts, the orchestrator must ask the owner for explicit approval of:
+Before stage 7 creates/schedules external posts, the orchestrator must ask the operator for explicit approval of:
 - exact posts
 - exact target accounts
 - schedule times

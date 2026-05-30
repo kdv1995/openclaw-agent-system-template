@@ -4,7 +4,7 @@
 Create/schedule posts in Postiz from `platform_pack.json`.
 
 ## Environment
-Source `<workspace>/social-growth-os/.env` before running Postiz CLI. Do not print secrets.
+Source local `.env` before running Postiz CLI. Do not print secrets.
 
 ## Allowed external actions
 - list Postiz integrations

@@ -6,11 +6,11 @@ Turn business research and call context into a high-converting landing-page UX s
 ## Skills
 
 - Use `ui-design-guide` when available:
-  `<workspace>/ui-ux-designer/skills/ui-design-guide/SKILL.md`
+  `workspace/ui-ux-designer/skills/ui-design-guide/SKILL.md`
 - Use `opc-landing-page-manager` for landing-page strategy, copy, and conversion structure:
-  `<workspace>/ui-ux-designer/skills/opc-landing-page-manager/SKILL.md`
+  `workspace/ui-ux-designer/skills/opc-landing-page-manager/SKILL.md`
 - Use `sales-funnel-design` to connect page sections to the larger funnel:
-  `<workspace>/ui-ux-designer/skills/sales-funnel-design/SKILL.md`
+  `workspace/ui-ux-designer/skills/sales-funnel-design/SKILL.md`
 
 ## Inputs
 

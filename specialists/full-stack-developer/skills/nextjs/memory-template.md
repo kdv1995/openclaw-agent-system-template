@@ -6,18 +6,18 @@
 # Next.js Patterns
 
 ## Stack
-- **Version:** 
+- **Version:**
 - **Router:** App Router / Pages Router
 - **TypeScript:** Yes / No
-- **Database:** 
-- **Auth:** 
-- **Styling:** 
-- **Deployment:** 
+- **Database:**
+- **Auth:**
+- **Styling:**
+- **Deployment:**
 
 ## Preferences
 - **Proactive help:** Yes / On request only
-- **Component naming:** 
-- **File organization:** 
+- **Component naming:**
+- **File organization:**
 
 ## Project Conventions
 <!-- Add team/personal conventions here -->
@@ -32,9 +32,9 @@
 # {Project Name}
 
 ## Overview
-- **Type:** 
-- **Status:** 
-- **Repo:** 
+- **Type:**
+- **Status:**
+- **Repo:**
 
 ## Architecture Decisions
 <!-- Key decisions and why -->

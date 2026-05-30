@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Threads content batch",
+  "type": "object",
+  "required": ["generatedAt", "brief", "posts"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "brief": { "type": "object" },
+    "posts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "pillar", "format", "hook", "body", "cta", "post", "charCount", "score", "warnings"],
+        "properties": {
+          "id": { "type": "string" },
+          "pillar": { "type": "string" },
+          "format": { "type": "string" },
+          "hook": { "type": "string" },
+          "body": { "type": "string" },
+          "cta": { "type": "string" },
+          "post": { "type": "string" },
+          "charCount": { "type": "integer", "minimum": 1, "maximum": 500 },
+          "score": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "warnings": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

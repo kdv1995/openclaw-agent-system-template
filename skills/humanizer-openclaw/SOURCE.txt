@@ -1,0 +1,1 @@
+Adapted from https://github.com/blader/humanizer (MIT). Local version shortened and tuned for OpenClaw + the operator's Ukrainian concise professional style.

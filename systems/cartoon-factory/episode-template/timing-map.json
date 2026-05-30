@@ -1,0 +1,19 @@
+{
+  "episode_id": "",
+  "target_duration_seconds": 60,
+  "aspect_ratio": "9:16",
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "start": 0,
+      "end": 3,
+      "purpose": "hook",
+      "visual_action": "",
+      "dialogue": [],
+      "sfx": [],
+      "music": [],
+      "transition_in": "none",
+      "transition_out": ""
+    }
+  ]
+}

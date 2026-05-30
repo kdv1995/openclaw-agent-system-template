@@ -5,10 +5,10 @@ Create the landing-page visual direction and image assets from the UX spec.
 
 ## Skills
 
-- Use `design` when learning/using template owner's visual preferences:
-  `<workspace>/visual-designer/skills/design/SKILL.md`
+- Use `design` when learning/using the operator's visual preferences:
+  `workspace/visual-designer/skills/design/SKILL.md`
 - Use `frontend-design` when visual direction affects web UI/frontend presentation:
-  `<workspace>/visual-designer/skills/frontend-design-3/SKILL.md`
+  `workspace/visual-designer/skills/frontend-design-3/SKILL.md`
 
 ## Inputs
 
@@ -34,7 +34,7 @@ Generated assets should live under:
 
 ## Image Rule
 
-Landing images must be generated through GPT image model 2.0 via the subscribed ChatGPT/OpenClaw image route. Do not use the legacy local `imagegen` OpenAI API CLI path unless template owner explicitly changes this rule.
+Landing images must be generated through GPT image model 2.0 via the subscribed ChatGPT/OpenClaw image route. Do not use the legacy local `imagegen` OpenAI API CLI path unless the operator explicitly changes this rule.
 
 ## Quality Bar
 

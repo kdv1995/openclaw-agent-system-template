@@ -34,7 +34,7 @@ import { revalidatePath, revalidateTag } from 'next/cache'
 // Revalidate by path
 export async function updatePost(id: string, data: any) {
   await db.post.update({ where: { id }, data })
-  
+
   revalidatePath('/blog')           // Specific page
   revalidatePath('/blog/[slug]', 'page')  // Dynamic route
   revalidatePath('/blog', 'layout') // Layout and all pages
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
   if (secret !== process.env.REVALIDATE_SECRET) {
     return Response.json({ error: 'Invalid secret' }, { status: 401 })
   }
-  
+
   revalidateTag('posts')
   return Response.json({ revalidated: true })
 }
@@ -118,7 +118,7 @@ import { useRouter } from 'next/navigation'
 
 function Component() {
   const router = useRouter()
-  
+
   // Force refresh from server
   router.refresh()
 }
@@ -207,7 +207,7 @@ export const revalidate = 3600 // 1 hour
 
 async function Page() {
   const posts = await getCachedPosts() // Cached
-  
+
   return (
     <>
       <PostList posts={posts} />

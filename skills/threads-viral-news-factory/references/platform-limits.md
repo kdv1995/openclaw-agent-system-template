@@ -1,12 +1,12 @@
 # Threads Platform Limits
 
-Operational defaults for template owner's Threads factory:
+Operational defaults for the operator's Threads factory:
 
 - Hard limit: 500 characters per Threads post.
 - Preferred news format: 3-7 posts in a reply chain.
-- Single post is an exception: use only for tiny updates, replies, or when template owner explicitly asks for a short post.
+- Single post is an exception: use only for tiny updates, replies, or when the operator explicitly asks for a short post.
 - Each post should usually be 120-420 characters, with 500 as the hard limit.
-- Use Postiz integration `POSTIZ_THREADS_PROFILE_ID` for `your_profile`.
+- Use Postiz integration `cmn2z0wij06plpb0yrviw718g` for `example_threads_handle`.
 
 Validation:
 
@@ -18,7 +18,7 @@ Direct fallback when Postiz is unavailable:
 
 ```bash
 set -a
-. <openclaw-home>/.env
+. ~/.openclaw/.env
 set +a
 node scripts/threads_publish_direct_fallback.mjs <json-file>
 ```
@@ -33,7 +33,7 @@ Expected JSON shape:
 ```json
 {
   "platform": "threads",
-  "integrationId": "POSTIZ_THREADS_PROFILE_ID",
+  "integrationId": "cmn2z0wij06plpb0yrviw718g",
   "format": "thread",
   "posts": ["hook/news", "context", "why it matters", "takeaway"]
 }

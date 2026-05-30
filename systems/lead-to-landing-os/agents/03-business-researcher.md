@@ -6,9 +6,9 @@ Research a business that showed interest and prepare context for landing strateg
 ## Skills
 
 - Use `market-research` for category, local market, customer segment, and demand context:
-  `<workspace>/business-researcher/skills/market-research/SKILL.md`
+  `workspace/business-researcher/skills/market-research/SKILL.md`
 - Use `competitive-analysis` for competitor mapping and positioning gaps:
-  `<workspace>/business-researcher/skills/competitive-analysis/SKILL.md`
+  `workspace/business-researcher/skills/competitive-analysis/SKILL.md`
 
 ## Inputs
 

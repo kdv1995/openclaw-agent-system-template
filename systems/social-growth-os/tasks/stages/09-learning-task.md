@@ -1,7 +1,7 @@
 # Stage Task: Learning Curator
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/09-learning-curator.md`
+`systems/social-growth-os/agents/09-learning-curator.md`
 
 ## Goal
 Convert performance results into durable learnings and next experiments.

@@ -1,0 +1,7 @@
+{
+  "content": "{{post}}",
+  "media": [],
+  "date": "{{isoDate}}",
+  "integrations": ["{{threadsIntegrationId}}"],
+  "shortLink": false
+}

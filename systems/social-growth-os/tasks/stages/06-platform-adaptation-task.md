@@ -1,7 +1,7 @@
 # Stage Task: Platform Adapter
 
 ## Agent brief
-`<workspace>/social-growth-os/agents/06-platform-adapter.md`
+`systems/social-growth-os/agents/06-platform-adapter.md`
 
 ## Goal
 Adapt approved content for TikTok, Instagram, Facebook, and Threads.

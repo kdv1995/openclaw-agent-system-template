@@ -2,7 +2,7 @@
 
 Operational pipeline for turning qualified outbound leads into researched landing-page projects.
 
-The main orchestrator owns template owner communication, scope control, and final verification. Specialist agents work on bounded tasks and report back with evidence.
+The main orchestrator owns the operator communication, scope control, and final verification. Specialist agents work on bounded tasks and report back with evidence.
 
 ## Default Flow
 
@@ -13,13 +13,13 @@ The main orchestrator owns template owner communication, scope control, and fina
 5. `visual-designer` creates landing visual direction and image prompts/assets. Landing images must use GPT image model 2.0 through the subscribed ChatGPT/OpenClaw image route, not the legacy OpenAI API CLI path.
 6. `full-stack-developer` builds or updates the landing page from the approved UX/design spec.
 7. `seo-optimizer` audits the page, keywords, technical SEO, metadata, analytics readiness, and conversion tracking.
-8. Main orchestrator verifies outputs and reports next action to template owner.
+8. Main orchestrator verifies outputs and reports next action to the operator.
 
 ## Safety
 
 - Outbound calls require explicit approved scope: sheet name/range/rows, caller number, purpose, and script.
 - Public publishing, sending emails, live deploys, and destructive CRM changes require explicit task permission.
-- Agents do not message template owner directly unless the task explicitly says so.
+- Agents do not message the operator directly unless the task explicitly says so.
 
 ## Paths
 

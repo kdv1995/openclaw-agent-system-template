@@ -83,12 +83,12 @@ export default auth((req) => {
   const isLoggedIn = !!req.auth
   const isAuthPage = req.nextUrl.pathname.startsWith('/login')
   const isProtected = req.nextUrl.pathname.startsWith('/dashboard')
-  
+
   // Redirect logged-in users away from auth pages
   if (isAuthPage && isLoggedIn) {
     return Response.redirect(new URL('/dashboard', req.url))
   }
-  
+
   // Redirect unauthenticated users to login
   if (isProtected && !isLoggedIn) {
     const callbackUrl = encodeURIComponent(req.nextUrl.pathname)
@@ -110,11 +110,11 @@ import { redirect } from 'next/navigation'
 
 export default async function DashboardPage() {
   const session = await auth()
-  
+
   if (!session) {
     redirect('/login')
   }
-  
+
   return (
     <div>
       <h1>Welcome, {session.user?.name}</h1>
@@ -154,15 +154,15 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 
 export function UserNav() {
   const { data: session, status } = useSession()
-  
+
   if (status === 'loading') {
     return <div>Loading...</div>
   }
-  
+
   if (!session) {
     return <button onClick={() => signIn()}>Sign In</button>
   }
-  
+
   return (
     <div>
       <span>{session.user?.name}</span>
@@ -183,7 +183,7 @@ import { useSearchParams } from 'next/navigation'
 export function LoginForm() {
   const searchParams = useSearchParams()
   const callbackUrl = searchParams.get('callbackUrl') || '/dashboard'
-  
+
   return (
     <div>
       <button onClick={() => signIn('github', { callbackUrl })}>
@@ -192,7 +192,7 @@ export function LoginForm() {
       <button onClick={() => signIn('google', { callbackUrl })}>
         Sign in with Google
       </button>
-      
+
       {/* Credentials form */}
       <form action={async (formData) => {
         await signIn('credentials', {
@@ -242,11 +242,11 @@ declare module 'next-auth' {
 // Check role in Server Component
 export default async function AdminPage() {
   const session = await auth()
-  
+
   if (session?.user?.role !== 'admin') {
     redirect('/unauthorized')
   }
-  
+
   return <AdminDashboard />
 }
 
@@ -270,11 +270,11 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   const session = await auth()
-  
+
   if (!session) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
-  
+
   return NextResponse.json({ data: 'Protected data' })
 }
 ```
@@ -286,11 +286,11 @@ import { auth } from '@/auth'
 
 export async function updateProfile(formData: FormData) {
   const session = await auth()
-  
+
   if (!session?.user?.id) {
     throw new Error('Unauthorized')
   }
-  
+
   await db.user.update({
     where: { id: session.user.id },
     data: { name: formData.get('name') },

@@ -1,0 +1,45 @@
+{
+  "factory": "threads",
+  "owner": "main",
+  "account": "example_threads_handle",
+  "postizIntegrationId": "cmn2z0wij06plpb0yrviw718g",
+  "agents": [
+    {
+      "id": "threads-research",
+      "roleFile": "01-research-agent.md",
+      "handoff": "research -> writer",
+      "externalWrites": false
+    },
+    {
+      "id": "threads-writer",
+      "roleFile": "02-writer-agent.md",
+      "handoff": "writer -> editor",
+      "externalWrites": false
+    },
+    {
+      "id": "threads-editor",
+      "roleFile": "03-editor-agent.md",
+      "handoff": "editor -> scheduler queue",
+      "externalWrites": false
+    },
+    {
+      "id": "threads-scheduler",
+      "roleFile": "04-scheduler-agent.md",
+      "handoff": "scheduler -> Postiz",
+      "externalWrites": true,
+      "requiresApproval": true
+    },
+    {
+      "id": "threads-analytics",
+      "roleFile": "05-analytics-agent.md",
+      "handoff": "analytics -> learning",
+      "externalWrites": false
+    },
+    {
+      "id": "threads-learning",
+      "roleFile": "06-learning-agent.md",
+      "handoff": "learning -> updated rules",
+      "externalWrites": false
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 # Facebook Image Post Defaults
 
-Operational defaults for `Your Brand`:
+Operational defaults for `example brand`:
 
 - Preferred feed image: square 1:1, 1080x1080 or higher.
 - Generated minimum accepted: 1024x1024.
 - Alternate feed image: 4:5, 1080x1350.
 - Format: PNG or JPG.
-- Post target: Postiz integration `POSTIZ_FACEBOOK_ID`.
+- Post target: Postiz integration `cmojta1o20165o70ygbci5fit`.
 
 Post shape:
 
@@ -24,7 +24,7 @@ Direct fallback when Postiz is unavailable:
 
 ```bash
 set -a
-. <openclaw-home>/.env
+. ~/.openclaw/.env
 set +a
 node scripts/facebook_page_publish_direct_fallback.mjs <json-file>
 ```
@@ -44,7 +44,7 @@ Expected JSON shape:
 ```json
 {
   "platform": "facebook",
-  "integrationId": "POSTIZ_FACEBOOK_ID",
+  "integrationId": "cmojta1o20165o70ygbci5fit",
   "content": "post text",
   "imagePath": "/absolute/path/to/image.png"
 }

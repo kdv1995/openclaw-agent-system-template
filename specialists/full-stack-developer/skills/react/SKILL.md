@@ -41,16 +41,16 @@ Before writing code, make these decisions:
 export function UserCard({ user, onEdit }: UserCardProps) {
   // 1. Hooks first (always)
   const [isOpen, setIsOpen] = useState(false)
-  
+
   // 2. Derived state (NO useEffect for this)
   const fullName = `${user.firstName} ${user.lastName}`
-  
+
   // 3. Handlers
   const handleEdit = useCallback(() => onEdit(user.id), [onEdit, user.id])
-  
+
   // 4. Early returns
   if (!user) return null
-  
+
   // 5. JSX (max 50 lines)
   return (...)
 }

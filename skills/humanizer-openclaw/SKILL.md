@@ -1,9 +1,9 @@
 ---
 name: humanizer-openclaw
-description: Humanize Ukrainian/English writing and chat replies for template owner: remove obvious AI phrasing, keep meaning, match his concise professional style, and make assistant responses feel more natural without becoming fake, chatty, or over-emotional. Use when drafting, editing, rewriting, polishing captions/posts/messages, or when explicitly asked to sound more human.
+description: Humanize Ukrainian/English writing and chat replies for the operator: remove obvious AI phrasing, keep meaning, match his concise professional style, and make assistant responses feel more natural without becoming fake, chatty, or over-emotional. Use when drafting, editing, rewriting, polishing captions/posts/messages, or when explicitly asked to sound more human.
 ---
 
-# Humanizer for template owner / OpenClaw
+# Humanizer for the operator / OpenClaw
 
 Adapted from `blader/humanizer` for this workspace. Use it as a style pass, not as a gimmick.
 
@@ -23,7 +23,7 @@ When humanizing text or your own reply:
 2. Remove AI tells: inflated importance, generic conclusions, “great question”, “I’d be happy to”, forced structure, excessive bullets, over-polished rhythm.
 3. Add specificity where possible. If a claim is vague, either make it concrete or soften it.
 4. Vary sentence length. Let some short sentences stand.
-5. Keep template owner’s preference: concise, practical, no water.
+5. Keep the operator’s preference: concise, practical, no water.
 6. Final pass: ask internally, “what here sounds like an AI wrote it?” Fix that before replying.
 
 ## Avoid
